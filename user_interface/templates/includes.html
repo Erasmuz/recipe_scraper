@@ -1,0 +1,36 @@
+<!-- ============================================================== -->
+<!-- All Jquery -->
+<!-- ============================================================== -->
+<script src="/vendors/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap tether Core JavaScript -->
+<script src="/vendors/popper.js/dist/umd/popper.min.js"></script>
+<script src="/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/vendors/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+<script src="/vendors/sparkline/sparkline.js"></script>
+<!--Wave Effects -->
+<script src="/js/waves.js"></script>
+<!--Menu sidebar -->
+<script src="/js/sidebarmenu.js"></script>
+
+<script src="/vendors/moment/min/moment.min.js"></script>
+
+<script src="/vendors/select2/dist/js/select2.full.min.js"></script>
+<script src="/vendors/select2/dist/js/select2.min.js"></script>
+<script src="/vendors/toastr/build/toastr.min.js"></script>
+
+<!--Custom JavaScript -->
+<script src="/js/custom.min.js"></script>
+
+<script>
+    function displayError(message) {
+        toastr.error(message, 'Error!');
+    }
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                displayError('{{ message }}');
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</script>

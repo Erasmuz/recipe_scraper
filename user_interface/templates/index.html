@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    {% include 'global_header.html' %}
+</head>
+
+<body>
+<div class="preloader">
+    <div class="lds-ripple">
+        <div class="lds-pos"></div>
+        <div class="lds-pos"></div>
+    </div>
+</div>
+
+<div id="main-wrapper">
+
+    {% include 'nav_bar.html' %}
+    {% include 'sidebar.html' %}
+
+    <div class="page-wrapper">
+        <div class="container-fluid">
+
+        <!--
+            <table id="recipe_table" style="width:100%" class="table table-striped jambo_table projects bulk_action table-bordered">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date</th>
+                    <th>Edit</th>
+                </tr>
+                </thead>
+            </table>
+        -->
+
+        </div>
+
+        {% include 'footer.html' %}
+
+    </div>
+
+</div>
+
+{% include 'includes.html' %}
+
+</body>
+
+</html>
+
+<script>
+    /*
+    $(document).ready(function() {
+        table = $('#recipe_table').DataTable({
+            "processing": true,
+            "ordering": true,
+            "ajax" : {
+                "url" : '/api/video',
+                "type" : "GET",
+                'dataSrc': 'objects'
+            },
+            "columns": [
+                { "data" : "video_name", "defaultContent": "<i>Not set</i>" },
+                { "data" : "date", "defaultContent": "<i>Not set</i>" },
+                { "defaultContent": '<button id="view_button" class="btn btn-info"><i class="fa fa-pencil"></i> View </button>'}
+            ]
+        });
+     */
+</script>
